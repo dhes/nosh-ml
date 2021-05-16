@@ -1,21 +1,35 @@
 {
     "name": "nosh2/nosh2",
     "description": "NOSH ChartingSystem.",
-    "keywords": ["nosh", "laravel", "medical", "jquery", "javascript", "php", "health", "ehr", "emr"],
+    "keywords": [
+        "nosh",
+        "laravel",
+        "medical",
+        "jquery",
+        "javascript",
+        "php",
+        "health",
+        "ehr",
+        "emr"
+    ],
     "license": "AGPL-3.0",
     "type": "project",
-	"authors": [
-		{
-			"name": "Michael Shihjay Chen",
-			"email": "shihjay2@gmail.com",
-			"homepage": "http://noshemr.wordpress.com",
-			"role": "Developer"
-		}
-	],
+    "authors": [
+        {
+            "name": "Michael Shihjay Chen",
+            "email": "shihjay2@gmail.com",
+            "homepage": "http://noshemr.wordpress.com",
+            "role": "Developer"
+        }
+    ],
     "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/dhes/tcpdi-merger"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/dhes/rtf-html-php"
         }
     ],
     "require": {
@@ -41,14 +55,15 @@
         "phpseclib/phpseclib": "~2.0",
         "pragmarx/countries": "^0.7",
         "shihjay2/openid-connect-uma-php": "dev-master",
-        "shihjay2/tcpdi-merger": "dev-bugfix", 
+        "shihjay2/tcpdi-merger": "dev-bugfix",
         "simplesoftwareio/simple-qrcode": "~1.4",
         "soapbox/laravel-formatter": "2.x",
         "symfony/yaml": "^5.2",
         "web-token/jwt-core": "^2.2",
         "web-token/jwt-easy": "^2.2",
         "web-token/jwt-key-mgmt": "^2.2",
-        "web-token/jwt-signature-algorithm-rsa": "^2.2"
+        "web-token/jwt-signature-algorithm-rsa": "^2.2",
+        "dhes/rtf-html-php": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",

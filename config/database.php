@@ -84,15 +84,29 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => 'ml_db_1',
+            'port' => '5432',
+            'database' => 'ml',
+            'username' => 'dheslinga',
+            'password' => 'q!w2e3r4',
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
         ],
+
+        'mysqlRxnorm' => [
+			'driver'    => 'mysql',
+			'host' => 'docker_rxnorm_db_1',
+            'port' => '3307',
+			'database'  => 'RxNorm',
+			'username'  => 'root',
+			'password'  => 'example',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_general_ci',
+			'prefix'    => '',
+            'strict' => false,
+            'engine' => null,
+		],
 
     ],
 

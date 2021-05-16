@@ -6941,7 +6941,8 @@ class Controller extends BaseController
                 'imm_elsewhere' => $result->imm_elsewhere,
                 'imm_vis' => $result->imm_vis,
                 'imm_manufacturer' => $result->imm_manufacturer,
-                'imm_provider' => Session::get('displayname'),
+                // 'imm_provider' => Session::get('displayname'), // DH so it displays database result instead of session. 
+                'imm_provider' => $result->imm_provider, // DH
                 'imm_cvxcode' => $result->imm_cvxcode
             ];
         }
@@ -6982,14 +6983,14 @@ class Controller extends BaseController
             $items[] = [
                 'name' => 'imm_body_site',
                 'label' => trans('noshform.imm_body_site'),
-                'type' => 'select',
+                'type' => 'text', // DH changed from dropdown
                 'select_items' => $site_arr,
                 'default_value' => $imm['imm_body_site']
             ];
             $items[] = [
                 'name' => 'imm_route',
                 'label' => trans('noshform.imm_route'),
-                'type' => 'select',
+                'type' => 'text', // DH changed from dropdown
                 'select_items' => $this->array_route(),
                 'default_value' => $imm['imm_route']
             ];
@@ -7043,9 +7044,10 @@ class Controller extends BaseController
         ];
         $items[] = [
             'name' => 'imm_provider',
-            'type' => 'hidden',
-            'required' => true,
-            'default_value' => $imm['imm_provider']
+            'label' => 'Provider', // DH added
+            'type' => 'text',  // DH changed from hidden
+            'readonly' => true, // DH added; 'required' removed
+            'default_value' => $imm['imm_provider'] // DH value redefined above
         ];
         $items[] = [
             'name' => 'nosh_action',
